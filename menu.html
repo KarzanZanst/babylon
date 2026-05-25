@@ -361,7 +361,7 @@
     <div class="menu-card-header">
       <span>🥙 Family Trays · Shawarma &amp; Wraps · Appetizers</span>
     </div>
-    <div class="menu-img-wrapper" onclick="openLightbox('1779720285686_Menu_2026.jpg')">
+<div class="menu-img-wrapper" onclick="openLightbox('Menu 2026.jpg')">
       <img src="Menu 2026.jpg" alt="Menu Page 1 — Family Combo Trays, Wraps, Appetizers">
       <div class="zoom-hint">🔍 Tap to zoom</div>
     </div>
@@ -372,7 +372,7 @@
     <div class="menu-card-header">
       <span>🍖 Shawarma Plates · Kobabs · Grills · Plates</span>
     </div>
-    <div class="menu-img-wrapper" onclick="openLightbox('1779720285685_Menu_2026_1.jpg')">
+<div class="menu-img-wrapper" onclick="openLightbox('Menu 2026 1.jpg')">
       <img src="Menu 2026 1.jpg" alt="Menu Page 2 — Shawarma Plates, Kobabs, Grills, Plates">
       <div class="zoom-hint">🔍 Tap to zoom</div>
     </div>
@@ -403,6 +403,11 @@
     document.getElementById('lightbox').classList.remove('active');
     document.body.style.overflow = '';
   }
+  function openLightbox(src) {
+  document.getElementById('lightbox-img').src = encodeURI(src);
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
